@@ -2,6 +2,7 @@ import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updat
 import React, { useState, useEffect, useCallback, useContext } from 'react';
 import { db } from '../firebase/firebase.config';
 import { AuthContext } from '../context/AuthContext';
+import LoadingSpinner from './LoadingSpinner';
 
 function Search() {
     const [userName, setUserName] = useState("");
@@ -94,7 +95,7 @@ function Search() {
                     value={userName}
                 />
             </div>
-            {loading && <span>Loading...</span>}
+            {loading && <span><LoadingSpinner/></span>}
             {err && <span>User Not Found</span>}
             {user &&
                 <div
