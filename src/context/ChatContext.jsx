@@ -1,10 +1,10 @@
 import { createContext, useContext, useReducer } from "react";
-import { AuthContex } from "./AuthContext";
+import { AuthContext } from "./AuthContext";
 
-export const ChatContex = createContext();
+export const ChatContext = createContext();
 
 export const ChatContexProvider = ({ children }) => {
-    const { currentUser } = useContext(AuthContex);
+    const { currentUser } = useContext(AuthContext);
 
     const INITIAL_STATE = {
         chatId: "null",
@@ -26,9 +26,9 @@ export const ChatContexProvider = ({ children }) => {
     const [state, dispatch] = useReducer(chatReducer, INITIAL_STATE)
 
     return (
-        <ChatContex.Provider value={{ data: state, dispatch }}>
+        <ChatContext.Provider value={{ data: state, dispatch }}>
             {children}
-        </ChatContex.Provider>
+        </ChatContext.Provider>
     )
 
 }

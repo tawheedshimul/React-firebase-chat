@@ -1,7 +1,7 @@
 import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import React, { useState, useEffect, useCallback, useContext } from 'react';
 import { db } from '../firebase/firebase.config';
-import { AuthContex } from '../context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 function Search() {
     const [userName, setUserName] = useState("");
@@ -10,7 +10,7 @@ function Search() {
     const [loading, setLoading] = useState(false);
 
 
-    const { currentUser } = useContext(AuthContex);
+    const { currentUser } = useContext(AuthContext);
 
     const handleSearch = useCallback(async () => {
         if (userName.trim() === '') {

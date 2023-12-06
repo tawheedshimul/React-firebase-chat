@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import Messages from './Messages';
 import Input from './Input';
-import { ChatContex } from '../context/ChatContext';
+import { ChatContext } from '../context/ChatContext';
 
 function Chat() {
-    const { data } = useContext(ChatContex);
+    const { data } = useContext(ChatContext);
     return (
         <div className='w-9/12 '>
             <div className=' h-16 bg-green-400 flex items-center font-semibold justify-between px-3'>

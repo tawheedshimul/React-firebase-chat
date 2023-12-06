@@ -3,10 +3,10 @@ import Home from './pages/Home';
 import Register from './pages/Register/Register';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login/Login';
-import { AuthContex } from './context/AuthContext';
+import { AuthContext } from './context/AuthContext';
 
 function App() {
-  const { currentUser } = useContext(AuthContex);
+  const { currentUser } = useContext(AuthContext);
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {

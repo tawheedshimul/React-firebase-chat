@@ -1,11 +1,11 @@
 import { signOut } from 'firebase/auth'
 import React, { useContext } from 'react'
 import { auth } from '../firebase/firebase.config'
-import { AuthContex } from '../context/AuthContext'
+import { AuthContext } from '../context/AuthContext'
 
 function Navbar() {
 
-  const { currentUser } = useContext(AuthContex);
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <div className='flex items-center bg-green-700 h-16 p-2 justify-between text-white'>

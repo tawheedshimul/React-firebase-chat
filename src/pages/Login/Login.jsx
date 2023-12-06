@@ -27,6 +27,7 @@ const Login = () => {
 
     return (
         <div>
+            <p className='w-full bg-green-500 p-8 text-center text-2xl text-white rounded'>Welcome to Tawheed Chat</p>
             <div className="p-10 max-w-md mx-auto bg-white rounded shadow-xl">
                 <h1 className="text-3xl font-bold text-center mb-8">TawheedChat</h1>
                 <h2 className="text-2xl font-bold mb-4">Login</h2>
